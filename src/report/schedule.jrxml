@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="schedule" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ec710a91-a9ec-48f3-a001-082e504109bd">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mysqlgym"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="479"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="521"/>
+	<parameter name="shedul_ID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT a.*,b.F_Name,b.Package_ID,b.Gender FROM gym.sheduledetails AS a INNER JOIN member AS b ON a.Gym_ID=b.Gym_ID WHERE shedul_ID=$P{shedul_ID}]]>
+	</queryString>
+	<field name="shedul_ID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="shedul_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="Gym_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Gym_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="Trainer_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Trainer_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="StartDate" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="StartDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="EndDate" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="EndDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="IssuedDate" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="IssuedDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="Weight" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Weight"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="Height" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Height"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="BMI" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="BMI"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="BodyType" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="BodyType"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="Front" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="Front"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="Back" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="Back"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="Type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="E1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="E1"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="S1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="S1"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="E2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="E2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="S2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="S2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="E3" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="E3"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="S3" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="S3"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="E4" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="E4"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="S4" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="S4"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="E5" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="E5"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="S5" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="S5"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="E6" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="E6"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="S6" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="S6"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="E7" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="E7"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="S7" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="S7"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="E8" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="E8"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="S8" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="S8"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="E9" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="E9"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="S9" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="S9"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="E10" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="E10"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="S10" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="S10"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="E11" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="E11"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="S11" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="S11"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="E12" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="E12"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="S12" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="S12"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="E13" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="E13"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="S13" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="S13"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="E14" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="E14"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="S14" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="S14"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="E15" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="E15"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="S15" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="S15"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sheduledetails"/>
+	</field>
+	<field name="F_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="F_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="Package_ID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Package_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="Gender" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Gender"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="201" y="3" width="281" height="30" uuid="85e2ad21-a9aa-4da8-8ad8-7ce0bd84e24e"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[No;217, Hapugala Junction,
+ Wakwella Road, Hapugala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="41" width="109" height="16" uuid="23d71793-a544-47f2-8164-3164b5d6111a"/>
+				<textElement textAlignment="Left">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Samith Gamage]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="4" width="50" height="64" uuid="288e128e-2296-4d9e-9823-3a80f0e164c2"/>
+				<imageExpression><![CDATA["C:/Users/DELL-PC/Documents/GYM Project/GYMsoft/src/Images/1 (2).jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="53" y="4" width="90" height="20" uuid="de6f0ec6-107c-49b4-8e26-8d85c2bc837f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="AdBhashitha" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[THE GYM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="32" width="181" height="16" uuid="f70d1b3b-4d7a-4053-9ece-b97b5f6cf42b"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[samithgamage95@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="25" width="110" height="20" uuid="8efa3b63-23df-4209-9ad1-8c52dc81d87b"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[FITNESS CENTER ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="48" width="100" height="16" uuid="1f500dc5-1acb-4a74-9663-80a6d9eb2906"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[077 08 99 974]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="56" width="168" height="14" uuid="36308815-b96b-48a1-addb-c0e7e6d158c8"/>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Gym Instructor & Personal Trainer]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="427" splitType="Stretch">
+			<textField>
+				<reportElement x="72" y="20" width="100" height="14" uuid="75f5235a-65c0-4b04-b1d8-a2e2303b3109"/>
+				<textFieldExpression><![CDATA[$F{shedul_ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="19" y="20" width="48" height="14" uuid="656299ce-bf62-4cc3-a4e3-4deecf09d60c"/>
+				<text><![CDATA[shedul_ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="72" y="35" width="100" height="17" uuid="709114c8-8843-4524-a0f1-02d62345f715"/>
+				<textFieldExpression><![CDATA[$F{Gym_ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="19" y="35" width="48" height="17" uuid="11ed8802-c2cc-4003-9fdb-a3f361020b58"/>
+				<text><![CDATA[Gym_ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="72" y="54" width="100" height="14" uuid="85ee2bdc-876f-4f59-a73e-3d51a59bb6e4"/>
+				<textFieldExpression><![CDATA[$F{Trainer_ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="19" y="54" width="48" height="14" uuid="14c97891-06d1-416a-ab35-fd69fa16e620"/>
+				<text><![CDATA[Trainer_ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="72" y="70" width="100" height="16" uuid="181af8b5-e8ae-4094-992a-62d49f3dbccf"/>
+				<textFieldExpression><![CDATA[$F{BMI}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="19" y="70" width="48" height="16" uuid="ecca7e7c-1c2e-43e5-aa82-48bd769e43a4"/>
+				<text><![CDATA[BMI]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="72" y="87" width="100" height="16" uuid="f3659fd5-a9ed-483b-b477-c44158e868de"/>
+				<textFieldExpression><![CDATA[$F{BodyType}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="19" y="87" width="48" height="16" uuid="6dbb2444-ffa1-4dd5-826d-5d0475f03497"/>
+				<text><![CDATA[BodyType]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="20" width="100" height="15" uuid="65b47159-0af0-4a9d-8489-8a400daada38"/>
+				<textFieldExpression><![CDATA[$F{StartDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="324" y="20" width="50" height="15" uuid="6be68172-5d25-405f-9bd6-ceca9990c5aa"/>
+				<text><![CDATA[StartDate]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="38" width="100" height="18" uuid="2ea1e52e-38c1-4f63-889d-33ec90c8766d"/>
+				<textFieldExpression><![CDATA[$F{EndDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="324" y="38" width="50" height="18" uuid="c21ca232-3a6a-4209-b808-fd8462e38e8e"/>
+				<text><![CDATA[EndDate]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="58" width="100" height="20" uuid="5410c471-869e-434f-8f2f-2d270d6c7471"/>
+				<textFieldExpression><![CDATA[$F{IssuedDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="324" y="58" width="50" height="20" uuid="2a9d818b-a035-4830-8a7f-8fc38f736643"/>
+				<text><![CDATA[IssuedDate]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="80" width="100" height="17" uuid="5ff87a4e-7849-4e75-972f-ea2cd5e19cf4"/>
+				<textFieldExpression><![CDATA[$F{Type}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="324" y="80" width="50" height="17" uuid="3870a7c5-3242-4af2-b221-2877a58953e6"/>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="135" y="123" width="133" height="30" uuid="5eeae4d5-eec9-4bb9-b1f0-bb3f0c93fb9e"/>
+				<textFieldExpression><![CDATA[$F{E1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="123" width="100" height="30" uuid="ceb0a5f9-9e55-441e-94f9-69bf6307fe48"/>
+				<textFieldExpression><![CDATA[$F{S1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="140" width="133" height="30" uuid="130a01c6-af76-4f99-a6a5-7328c42be4bd"/>
+				<textFieldExpression><![CDATA[$F{E2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="140" width="100" height="30" uuid="21ee4919-a136-4291-9463-da534e374294"/>
+				<textFieldExpression><![CDATA[$F{S2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="158" width="133" height="30" uuid="3d9f0069-8b3b-4110-b9a7-d1b67cff53c5"/>
+				<textFieldExpression><![CDATA[$F{E3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="176" width="133" height="30" uuid="20f3680b-8467-4c79-9715-3aad7c376aa2"/>
+				<textFieldExpression><![CDATA[$F{E4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="176" width="100" height="30" uuid="11ca5daa-3327-4fb4-aa27-f0f547a7b15f"/>
+				<textFieldExpression><![CDATA[$F{S4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="192" width="133" height="30" uuid="a3f5a011-8a74-4ab1-a828-182856f89af9"/>
+				<textFieldExpression><![CDATA[$F{E5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="193" width="100" height="30" uuid="54c7ae6e-0929-4dc6-8638-4967daa3be79"/>
+				<textFieldExpression><![CDATA[$F{S5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="209" width="133" height="30" uuid="1d703cbc-a228-4992-8d8d-472a4fa65562"/>
+				<textFieldExpression><![CDATA[$F{E6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="210" width="100" height="30" uuid="62aec120-1f95-49b0-bcdd-4fc4db01be33"/>
+				<textFieldExpression><![CDATA[$F{S6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="227" width="133" height="30" uuid="90c18f67-3dac-4ba1-9eba-8232b3e0eb42"/>
+				<textFieldExpression><![CDATA[$F{E7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="228" width="100" height="29" uuid="a1a5333a-f122-48a9-b75e-364bec6783c2"/>
+				<textFieldExpression><![CDATA[$F{S7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="245" width="133" height="30" uuid="fbb3d4e8-c739-4f38-aa62-cce163c9f220"/>
+				<textFieldExpression><![CDATA[$F{E8}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="245" width="100" height="30" uuid="8031956d-0e93-4bc2-ac40-490174ab2f63"/>
+				<textFieldExpression><![CDATA[$F{S8}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="263" width="133" height="30" uuid="4e96e96f-23b6-494d-943f-1d0af5d9a9fc"/>
+				<textFieldExpression><![CDATA[$F{E9}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="263" width="100" height="30" uuid="f0771c5d-cefe-4cce-a06d-6f36eb6c5980"/>
+				<textFieldExpression><![CDATA[$F{S9}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="282" width="133" height="30" uuid="9acf0088-0e63-4ff9-9c70-0f5ec4e10873"/>
+				<textFieldExpression><![CDATA[$F{E10}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="281" width="100" height="30" uuid="fb3da531-c9c1-4108-9162-2496b8c4b488"/>
+				<textFieldExpression><![CDATA[$F{S10}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="301" width="133" height="30" uuid="a4c350a0-6a2b-4813-926c-f89a59b4c957"/>
+				<textFieldExpression><![CDATA[$F{E11}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="300" width="100" height="30" uuid="20794a25-cf22-49e9-91ac-fba697259faa"/>
+				<textFieldExpression><![CDATA[$F{S11}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="320" width="133" height="30" uuid="fb91e1e2-4c42-4899-906d-4b433a2c09c9"/>
+				<textFieldExpression><![CDATA[$F{E12}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="319" width="100" height="30" uuid="4db3cf47-1ef0-418b-8e7e-e6749eb8af04"/>
+				<textFieldExpression><![CDATA[$F{S12}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="339" width="100" height="30" uuid="2f98185e-7d46-4a2d-bb4f-f6443c569115"/>
+				<textFieldExpression><![CDATA[$F{S13}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="340" width="133" height="30" uuid="6fcb3e74-c15c-42cc-9bc1-410ba6590c0d"/>
+				<textFieldExpression><![CDATA[$F{E13}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="360" width="133" height="30" uuid="f79e3802-f0aa-4fc8-80d8-37000e70d03e"/>
+				<textFieldExpression><![CDATA[$F{E14}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="358" width="100" height="30" uuid="d75660f4-2ef2-4d3f-baa3-43e12a616164"/>
+				<textFieldExpression><![CDATA[$F{S14}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="380" width="133" height="30" uuid="89d57e9a-fbe2-4d49-b60e-e5224e227477"/>
+				<textFieldExpression><![CDATA[$F{E15}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="378" width="100" height="30" uuid="94f53073-84b9-463a-a701-acfa55d48fbe"/>
+				<textFieldExpression><![CDATA[$F{S15}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="156" width="100" height="30" uuid="2794acb9-5bff-4d86-a69b-e56e5e930127"/>
+				<textFieldExpression><![CDATA[$F{S3}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

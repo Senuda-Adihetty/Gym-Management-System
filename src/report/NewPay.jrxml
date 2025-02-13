@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="NewPay" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4e38c07f-077a-4353-9f2f-3d0339d17f9b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mysqlgym"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="ID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT a.ID,a.Gym_ID, a.Year, a.Month, a.Paymentday, a.FeeAmount , b.F_Name, b.L_Name FROM gym.payment as a INNER JOIN gym.member b ON a.Gym_ID = b.Gym_ID WHERE a.ID=$P{ID}]]>
+	</queryString>
+	<field name="Gym_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Gym_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="Year" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Year"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="Month" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Month"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="Paymentday" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="Paymentday"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="FeeAmount" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FeeAmount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payment"/>
+	</field>
+	<field name="F_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="F_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<field name="L_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="L_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="member"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="64" y="41" width="109" height="16" uuid="f4579173-4b3c-4d3c-80a1-148c6fb165f6"/>
+				<textElement textAlignment="Left">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Samith Gamage]]></text>
+			</staticText>
+			<image>
+				<reportElement x="12" y="4" width="50" height="64" uuid="31d3bebc-f4ab-4530-b27f-1d4c5e6bb1b9"/>
+				<imageExpression><![CDATA["C:/Users/DELL-PC/Documents/GYM Project/GYMsoft/src/Images/1 (2).jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="64" y="4" width="90" height="20" uuid="6856bfce-e349-4f18-874e-cd1b7be8dc22">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="AdBhashitha" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[THE GYM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="25" width="110" height="20" uuid="225c9ac3-e764-4037-ae60-4384e4833a67"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[FITNESS CENTER ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="56" width="168" height="14" uuid="571933c7-fa26-43a3-918a-5b50d35805f1"/>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Gym Instructor & Personal Trainer]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="310" splitType="Stretch">
+			<textField>
+				<reportElement x="117" y="22" width="100" height="30" uuid="ee22b8a1-c642-48ba-a84d-116988fba6e9"/>
+				<textFieldExpression><![CDATA[$F{Gym_ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="22" width="100" height="30" uuid="72954173-4c32-45ce-8245-9bd1c18922b7"/>
+				<text><![CDATA[Gym_ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="117" y="90" width="100" height="30" uuid="22c82df6-3886-4adb-a942-cb25d59c7193"/>
+				<textFieldExpression><![CDATA[$F{Year}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="90" width="100" height="30" uuid="7154c8da-2d06-4ad4-808b-daa7cfe67c26"/>
+				<text><![CDATA[Year]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="117" y="110" width="100" height="30" uuid="b914da0a-cbee-473a-8cec-919e878c4d9e"/>
+				<textFieldExpression><![CDATA[$F{Month}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="110" width="100" height="30" uuid="845f2693-7a3c-4392-993a-4f005d4c9f8c"/>
+				<text><![CDATA[Month]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="117" y="40" width="100" height="30" uuid="5fee0cd3-65c4-4047-ab8c-e4941e416251"/>
+				<textFieldExpression><![CDATA[$F{F_Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="40" width="100" height="30" uuid="33978071-b099-45ca-9e05-f74da0d298a0"/>
+				<text><![CDATA[F_Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="117" y="60" width="100" height="30" uuid="2defa7c2-7aba-4153-87df-786deec989a4"/>
+				<textFieldExpression><![CDATA[$F{L_Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="60" width="100" height="30" uuid="20d29cdb-337d-4661-b2a1-511c51b69232"/>
+				<text><![CDATA[L_Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="117" y="140" width="100" height="30" uuid="5ada3c3b-29e8-4d55-b8b3-6804529fc032"/>
+				<textFieldExpression><![CDATA[$F{FeeAmount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="140" width="100" height="30" uuid="a28d3c7e-0bac-4a93-9a81-fe12e39db926"/>
+				<text><![CDATA[FeeAmount]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="117" y="180" width="100" height="30" uuid="aad9c7a3-f3e0-4412-a274-3850c470bf3d"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="180" width="100" height="30" uuid="2d92ffc4-f315-46fc-a369-83c4c3c1096e"/>
+				<text><![CDATA[Paid Date]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

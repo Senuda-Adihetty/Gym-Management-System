@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Salary" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="96aa6175-c89f-4f1b-a4e0-1ef54a466a83">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mysqlgym"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="Sal_ID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT a.Sal_ID, a.Trainer_ID, a.Year, a.Month, a.PaidDate, a.BasicSal, a.Bonus, a.Deduction,a.Final_Salary , b.F_Name, b.L_Name FROM salary as a INNER JOIN trainer b ON a.Trainer_ID = b.Trainer_ID WHERE a.Sal_ID= $P{Sal_ID}]]>
+	</queryString>
+	<field name="Sal_ID" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="Sal_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+	</field>
+	<field name="Trainer_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Trainer_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+	</field>
+	<field name="Year" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Year"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+	</field>
+	<field name="Month" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Month"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+	</field>
+	<field name="PaidDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="PaidDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+	</field>
+	<field name="BasicSal" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="BasicSal"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+	</field>
+	<field name="Bonus" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Bonus"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+	</field>
+	<field name="Deduction" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Deduction"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+	</field>
+	<field name="Final_Salary" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Final_Salary"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="salary"/>
+	</field>
+	<field name="F_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="F_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trainer"/>
+	</field>
+	<field name="L_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="L_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trainer"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="64" y="41" width="109" height="16" uuid="60a21de3-f7b0-45bc-866b-fc0c10ad6306"/>
+				<textElement textAlignment="Left">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Samith Gamage]]></text>
+			</staticText>
+			<image>
+				<reportElement x="12" y="4" width="50" height="64" uuid="845656f2-943e-4dcc-a3b6-487b39536ada"/>
+				<imageExpression><![CDATA["C:/Users/DELL-PC/Documents/GYM Project/GYMsoft/src/Images/1 (2).jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="64" y="4" width="90" height="20" uuid="a12a7883-cb73-4c5f-bac7-534d395b21d1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="AdBhashitha" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[THE GYM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="63" y="25" width="110" height="20" uuid="c5ed72e4-f258-498b-9660-5bb057422032"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[FITNESS CENTER ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="56" width="156" height="14" uuid="1a5347b2-1a44-4ab6-b2e8-b7a880ce1924"/>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Gym Instructor & Personal Trainer]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="296" splitType="Stretch">
+			<textField>
+				<reportElement x="120" y="5" width="100" height="30" uuid="23ba31e1-7ba1-44f2-a264-0c77e351c969"/>
+				<textFieldExpression><![CDATA[$F{Sal_ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="5" width="100" height="30" uuid="f18a300e-f4d8-4f40-80c3-b6b562b9420d"/>
+				<text><![CDATA[Sal_ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="24" width="100" height="30" uuid="063172ad-1b21-40b8-b82e-df4048638a19"/>
+				<textFieldExpression><![CDATA[$F{Trainer_ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="24" width="100" height="30" uuid="665ffc56-eab2-43c9-998b-c1073e10b307"/>
+				<text><![CDATA[Trainer_ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="83" width="100" height="30" uuid="43bac3a1-dcd7-41a3-88c6-6b521d3d6e5b"/>
+				<textFieldExpression><![CDATA[$F{Year}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="83" width="100" height="30" uuid="2c7852c2-a64a-452a-8e47-5a4fca2b03a0"/>
+				<text><![CDATA[Year]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="102" width="100" height="30" uuid="e0eebd48-d7b0-4747-b8b7-01eb2c94b7cd"/>
+				<textFieldExpression><![CDATA[$F{Month}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="102" width="100" height="30" uuid="7283dbde-c941-423b-89c3-776c044e076a"/>
+				<text><![CDATA[Month]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="122" width="100" height="30" uuid="f45fd556-5fe9-4d14-8a87-e03279cc5031"/>
+				<textFieldExpression><![CDATA[$F{BasicSal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="122" width="100" height="30" uuid="05a46896-942e-4859-a085-dbbe96e9136e"/>
+				<text><![CDATA[BasicSal]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="142" width="100" height="30" uuid="85eafc95-bed6-4ef3-9da1-caf075b21757"/>
+				<textFieldExpression><![CDATA[$F{Bonus}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="142" width="100" height="30" uuid="1513eb24-5d54-4ea5-87e0-018809c532c9"/>
+				<text><![CDATA[Bonus]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="161" width="100" height="30" uuid="4e59d4b0-dfd4-489f-acf9-eb3ce4bd2fd3"/>
+				<textFieldExpression><![CDATA[$F{Deduction}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="161" width="100" height="30" uuid="c8b16f4e-f032-45f5-9c1c-d46af702ae26"/>
+				<text><![CDATA[Deduction]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="182" width="100" height="30" uuid="4517a4d3-d4c3-4243-ad34-9d311846bea0"/>
+				<textFieldExpression><![CDATA[$F{Final_Salary}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="182" width="100" height="30" uuid="70f27994-1139-4a3e-8163-dcb01f55a9e9"/>
+				<text><![CDATA[Final_Salary]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="44" width="100" height="30" uuid="466e1163-817d-405d-a562-affa3b5572b4"/>
+				<textFieldExpression><![CDATA[$F{F_Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="44" width="100" height="30" uuid="3576f521-c90e-4e15-a07d-5f024c26db79"/>
+				<text><![CDATA[F_Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="62" width="100" height="30" uuid="a548cbc8-bffe-439b-990c-b53c973c295d"/>
+				<textFieldExpression><![CDATA[$F{L_Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="62" width="100" height="30" uuid="03d0fa47-cf31-4a7b-99dd-1e27b65181ac"/>
+				<text><![CDATA[L_Name]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="70" y="230" width="100" height="30" uuid="ee45e801-fc6d-48d0-82b3-f12154b27d0a"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="payment" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="974d85bf-9a48-499b-9acb-7e837cd7dc03">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mysqlgym"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="Trainer_ID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * From gym.trainer where Trainer_ID= $P{Trainer_ID}]]>
+	</queryString>
+	<field name="Trainer_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Trainer_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trainer"/>
+	</field>
+	<field name="F_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="F_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trainer"/>
+	</field>
+	<field name="L_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="L_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trainer"/>
+	</field>
+	<field name="Phone_No" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Phone_No"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trainer"/>
+	</field>
+	<field name="Gender" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Gender"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trainer"/>
+	</field>
+	<field name="Birthday" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="Birthday"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trainer"/>
+	</field>
+	<field name="Address1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Address1"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trainer"/>
+	</field>
+	<field name="Address2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Address2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trainer"/>
+	</field>
+	<field name="Start_Date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="Start_Date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trainer"/>
+	</field>
+	<field name="Basic_Sal" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Basic_Sal"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trainer"/>
+	</field>
+	<field name="Photo" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="Photo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="trainer"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="201" y="3" width="281" height="30" uuid="0333be1f-139e-4a1c-aa5a-b44e4dd969c2"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[No;217, Hapugala Junction,
+ Wakwella Road, Hapugala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="41" width="109" height="16" uuid="11469b59-be8a-4ad7-9288-a828db597ffd"/>
+				<textElement textAlignment="Left">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Samith Gamage]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="4" width="50" height="64" uuid="03971e4a-8707-4711-935b-f40116ef03f3"/>
+				<imageExpression><![CDATA["C:/Users/DELL-PC/Documents/GYM Project/GYMsoft/src/Images/1 (2).jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="53" y="4" width="90" height="20" uuid="88f36a8a-7e6a-4b6a-9c6f-85573f48780b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="AdBhashitha" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[THE GYM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="32" width="181" height="16" uuid="355379d9-a102-4b69-8778-60438b831408"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[samithgamage95@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="52" y="25" width="110" height="20" uuid="8c0a677d-8bb7-4492-b776-035eabb9675d"/>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[FITNESS CENTER ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="48" width="100" height="16" uuid="fb085ce6-d260-4e17-b554-a78b45201faa"/>
+				<textElement textAlignment="Right">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[077 08 99 974]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="56" width="168" height="14" uuid="aa1a9990-d900-46e6-8430-3c5df0585769"/>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Gym Instructor & Personal Trainer]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="152" splitType="Stretch">
+			<textField>
+				<reportElement x="116" y="10" width="130" height="25" uuid="b4316666-a75c-4a7e-9aba-9c89675f43df"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Trainer_ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="22" y="10" width="79" height="25" uuid="c05bb035-c189-4457-b916-0f32cca06da0"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Trainer_ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="116" y="37" width="130" height="25" uuid="632a2d81-3a1e-4bdc-bbcf-7272aab0407c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{F_Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="22" y="37" width="79" height="25" uuid="36837251-dbb9-4a8e-9b59-a77ccb0556cd"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[F_Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="116" y="64" width="130" height="25" uuid="86fe3e1b-4a9b-4082-8764-265c6622bff9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{L_Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="22" y="64" width="79" height="25" uuid="06284cb6-1a9a-4797-a65a-40aa57801955"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[L_Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="116" y="92" width="130" height="28" uuid="37565545-7064-4f79-aa8a-119bfa914b1f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Phone_No}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="22" y="92" width="79" height="28" uuid="36fe8dc0-a72e-46a9-8e1a-2d42bb818e7c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Phone_No]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="354" y="39" width="100" height="23" uuid="8cdace74-938b-4836-983f-873ddc16980b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Birthday}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="292" y="39" width="50" height="23" uuid="6aced781-5f8d-4cc9-8d48-415ee7241a77"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Birthday]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="354" y="108" width="100" height="28" uuid="c2799c3c-39f7-4375-b737-9df1e09cc14c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Basic_Sal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="292" y="108" width="50" height="28" uuid="551063ea-1a28-4ed9-9ea9-baac0eb24de2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Basic_Sal]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="354" y="10" width="100" height="26" uuid="91727822-3a25-4b77-842c-76e9fa7eec6f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Gender}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="292" y="10" width="50" height="26" uuid="2322c288-c60a-4d2e-a273-74bf225b049c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="354" y="65" width="124" height="24" uuid="5c871488-554b-4af1-b8c3-db9302f285dd"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Address1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="292" y="65" width="50" height="24" uuid="273cc5a1-768f-4630-aad8-435ec65cb437"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Address1]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="354" y="83" width="124" height="18" uuid="71be4370-24d3-4bd2-9de7-7e51d19d325b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Address2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
